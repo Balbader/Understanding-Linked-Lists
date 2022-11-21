@@ -54,7 +54,7 @@ void	ft_print_lst(t_list **lst) {
 	if (node == NULL)
 		printf("Error - node is empty!");
 	i = 1;
-	while (node->next != NULL)
+	while (node != NULL)
 	{
 		printf("node %d: %d\n ", i, *((int *)node->content));
 		node = node->next;
