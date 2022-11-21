@@ -54,16 +54,12 @@ void	ft_add_node(t_list **lst, t_list *node) {
 
 	if (!lst || !node)
 		return ;
-
 	new_node = (t_list *)malloc(sizeof(t_list));
 	if (!new_node)
 		return ;
-
 	new_node->content = node->content;
 	new_node->next = NULL;
-
 	current_node = *lst;
-
 	if (new_node != NULL)
 	{
 		if (current_node == NULL)
