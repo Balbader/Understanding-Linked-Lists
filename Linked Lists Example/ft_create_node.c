@@ -1,3 +1,9 @@
+/*
+Allocate (with malloc(3)) and return a new node.
+The variable 'content' is initialized with the value of the argument 'void *content'.
+The variable 'next' is initialized to NULL.
+*/
+
 #include "ll.h"
 
 t_list	*ft_create_node(void *content)
@@ -16,13 +22,4 @@ t_list	*ft_create_node(void *content)
 	// Make sure that the new_node points to NULL
 	new_node->next = NULL;
 	return (new_node);
-}
-
-int main(void) {
-
-	t_list	*new_node;
-
-	new_node = ft_create_node("I am new_node.");
-	printf("%s\n", (char *)new_node->content);
-	return (0);
 }
