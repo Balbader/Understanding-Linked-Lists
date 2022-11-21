@@ -33,8 +33,9 @@ void	ft_add_node(t_list **lst, t_list *node) {
 	if (new_node != NULL)
 	{
 		if (current_node == NULL)
-			*lst = current_node;
-		else {
+			*lst = new_node;
+		else
+		{
 			while (current_node->next != NULL)
 				current_node = current_node->next;
 			current_node->next = new_node;
@@ -55,7 +56,7 @@ void	ft_print_lst(t_list **lst) {
 	i = 1;
 	while (node->next != NULL)
 	{
-		printf("node %d : %d\n ", i, *((int *)node->content));
+		printf("node %d: %d\n ", i, *((int *)node->content));
 		node = node->next;
 		i++;
 	}
@@ -66,9 +67,9 @@ int	main(void) {
 	t_list	*lst = NULL;
 	t_list	*new_node = NULL;
 
-	for (int i = 0; i <= 10; i++) {
+	for (int i = 1; i <= 10; i++) {
 
-		int *ptr = (int *)malloc(sizeof(int));
+		int *ptr = malloc(sizeof(int *));
 		ptr[0] = i;
 		new_node = ft_create_new_node(ptr);
 		ft_add_node(&lst, new_node);
